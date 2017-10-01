@@ -12,7 +12,7 @@
 
 ## TypeScriptの監視コマンド
 
-tsc --outDir ./js/ --watch ./src/ts/page01.ts
+`tsc --outDir ./js/ --watch ./src/ts/page01.ts`
 
 - --out 出力ファイル名の指定
 - --watch 変更を監視するフォルダを指定
