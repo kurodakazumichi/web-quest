@@ -69,7 +69,7 @@ article {
       line-height: 1.7em;
       background: rgba(129,194,250, 0.1);
       border-radius: 0.3em;
-      margin-bottom: 1em;
+      margin-bottom: 0.5em;
 
       &:after {
         position: absolute;
@@ -89,6 +89,7 @@ article {
       margin-bottom: 1.0em;
       &.zoom1 {
         font-size: 35px;
+        margin-bottom: 0.4em;
       }
     }
 
@@ -97,6 +98,7 @@ article {
       padding: 0;
       font: 14px/1.6 'Rounded Mplus 1c', serif;
       list-style: none;
+      margin-bottom: 1.5em;
 
       li{
         position: relative;
@@ -264,5 +266,5 @@ table.deco {
 
 code {
   font-size: 23px;
-  line-height: 1.4em;  
+  line-height: 1.4em;
 }

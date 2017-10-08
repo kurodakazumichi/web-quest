@@ -43,7 +43,7 @@ article {
       line-height: 1.7em;
       background: rgba(129, 194, 250, 0.1);
       border-radius: 0.3em;
-      margin-bottom: 1em; }
+      margin-bottom: 0.5em; }
       article section h3:after {
         position: absolute;
         content: '';
@@ -58,11 +58,13 @@ article {
       line-height: 1.6em;
       margin-bottom: 1.0em; }
       article section > p.zoom1 {
-        font-size: 35px; }
+        font-size: 35px;
+        margin-bottom: 0.4em; }
     article section ul {
       padding: 0;
       font: 14px/1.6 'Rounded Mplus 1c', serif;
-      list-style: none; }
+      list-style: none;
+      margin-bottom: 1.5em; }
       article section ul li {
         position: relative;
         padding: 0.1em 1em 0.1em 2.0em;

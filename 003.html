@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>うぇぶくえ</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet' type='text/css' href='https://fonts.googleapis.com/earlyaccess/roundedmplus1c.css'>
+    <link rel="stylesheet" type="text/css" href="css/cssreset-min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+      button.deco{
+        display: block;
+        text-decoration: none;
+        height:35px;
+        width: 120px;
+        text-align: center;
+        color: #2bb6c1;
+        border:solid 1px #2bb6c1;
+        border-radius: 20px;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -o-transition: 0.3s;
+        -ms-transition: 0.3s;
+        transition: 0.3s;
+      }
+      button.deco:hover{
+        background: #2bb6c1;
+        color: #fff;
+      }
+    </style>
+    <script src="/web-quest/venders/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+      var onclickBtn = function(owner){
+        var c = {}
+        c.r = Math.floor(Math.random() * 255);
+        c.g = Math.floor(Math.random() * 255);
+        c.b = Math.floor(Math.random() * 255);
+        var bg = 'rgba('+c.r+','+c.g+','+c.b+',0.2)';
+        $(owner).parent().css('background-color', bg);
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+      <article>
+        <header>
+          <h1>HTMLとCSSとJavaScript</h1>
+        </header>
+        <section>
+          <h2>HTMLとCSSとJavaScript</h2>
+          <p>
+            このサイトで学習するHTMLとCSSとJavaScript<br>
+            それぞれが一体何なのか、どんな役割なのか<br>
+            そんな話をします。
+          </p>
+
+        </section>
+        <section>
+          <h2>超ざっくりまとめると</h2>
+          <ul>
+            <li>HTMLは体(基本の土台)</li>
+            <li>CSSは洋服(おしゃれな見た目)</li>
+            <li>JavaScriptは動作(動きをつける)</li>
+          </ul>
+
+          <p class="bottom">
+            ざっくり過ぎるので実際に見てみる。
+          </p>
+        </section>
+
+        <section>
+          <h2>HTML</h2>
+          <p>HTMLでボタンを作る。(土台を作る)</p>
+          <button>ボタンだよ</button>
+        </section>
+
+        <section>
+          <h2>CSS</h2>
+          <p>CSSでおしゃれにしてみる。(見た目)</p>
+          <button class="deco">ボタンだよ</button>
+        </section>
+
+        <section>
+          <h2>JavaScript</h2>
+          <p>
+            JavaScriptでボタンが押されたときに背景の色が変わるようにしてみる。<br>
+            押すたびに色々な色になるよ！
+          </p>
+          <button class="deco" onclick="onclickBtn(this);">ボタンだよ</button>
+          <p class="bottom">
+            今回はボタンが押されたときに、背景色を変えるという動作をつけました。<br>
+            他にもボタンの上にマウスが来た時、キーボードのキーが押されたときなど<br>
+            いろんなタイミングで、いろんな動作を付けられるのがJavaScriptです。
+          </p>
+        </section>
+
+        <section>
+          <h2>補足</h2>
+          <p>
+            HTMLは土台と書きましたが、本来のHTMLの役割は情報の構造化です。<br>
+            そう聞くと難しそうと感じるかもしれませんが
+          </p>
+          <ul>
+            <li>このページにはこんな情報が含まれてますよー</li>
+            <li>このタイトルで検索できるようにしてねー</li>
+            <li>全体の構成はこんな感じになってるよー</li>
+            <li>ここらへんが主張したいとこです！</li>
+          </ul>
+          <p>
+            というように文章だけではわからない情報を付与する。<br>
+            それがHTMLの<em>本来の役割</em>です。
+          </p>
+        </section>
+      </article>
+  </body>
+</html>
