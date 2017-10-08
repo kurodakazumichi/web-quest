@@ -1,11 +1,26 @@
+@charset "utf-8";
+//==============================================================================
+// 変数
+//==============================================================================
+$color-text1:rgb(109,174,230);
+$color-text2:#C35B9D;
+
+//==============================================================================
+// BODY
+//==============================================================================
 body {
   background-image: url(/web-quest/img/bg.png);
   line-height: 1.8em;
   font-family: 'Rounded Mplus 1c', serif;
 }
 
+//==============================================================================
+// 記事
+//==============================================================================
 article {
 
+  background: rgba(129,194,250, 0.1);
+  padding-bottom: 3em;
   header {
     margin-bottom: 3.0em;
 
@@ -27,6 +42,10 @@ article {
     box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.12);
     box-sizing: border-box;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
   }
 
   section {
@@ -51,38 +70,39 @@ article {
       background: rgba(129,194,250, 0.1);
       border-radius: 0.3em;
       margin-bottom: 1em;
-    }
 
-    h3:after {
-    position: absolute;
-    content: '';
-    top: 100%;
-    left: 10px;
-    border: 15px solid transparent;
-    border-top: 15px solid rgba(129,194,250, 0.1);
-    width: 0;
-    height: 0;
+      &:after {
+        position: absolute;
+        content: '';
+        top: 100%;
+        left: 10px;
+        border: 15px solid transparent;
+        border-top: 15px solid rgba(129,194,250, 0.1);
+        width: 0;
+        height: 0;
+      }
     }
 
     > p{
-      font-size: 21px;
-      line-height: 1.7em;
+      font-size: 25px;
+      line-height: 1.6em;
       margin-bottom: 1.0em;
       &.zoom1 {
         font-size: 35px;
       }
     }
 
+    // 順不同リスト
     ul{
       padding: 0;
-      font: 14px/1.6 'arial narrow', sans-serif;
+      font: 14px/1.6 'Rounded Mplus 1c', serif;
       list-style: none;
 
       li{
         position: relative;
         padding: 0.1em 1em 0.1em 2.0em;
         margin-bottom:5px;
-        color: rgb(129,194,250);
+        color: $color-text1;
         font-size: 30px;
         font-weight: bold;
 
@@ -119,17 +139,18 @@ article {
       }
     }
 
+    // 順序リスト
     ol {
       counter-reset:list;
       list-style-type:none;
-      font: 14px/1.6 'arial narrow', sans-serif;
+      font: 14px/1.6 'Rounded Mplus 1c', serif;
       padding: 0px;
 
       li {
         position:relative;
         padding: 0.1em 1em 0.1em 2.0em;
         margin-bottom:5px;
-        color: rgb(129,194,250);
+        color: $color-text1;
         font-size: 30px;
         font-weight: bold;
 
@@ -137,8 +158,8 @@ article {
          counter-increment: list;
          content: counter(list);
          position: absolute;
-         top: 11px;
-         left: 4px;
+         top: 12px;
+         left: 5px;
          width: 30px;
          height: 30px;
          text-align: center;
@@ -164,6 +185,22 @@ article {
       }
     }
 
+    // 定義リスト
+    dl {
+      dt {
+        color:$color-text1;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 1.6em;
+      }
+
+      dd {
+        font-size: 23px;
+        line-height: 1.6em;
+        margin-bottom: 0.5em;
+      }
+    }
+
     > .bottom {
       position: absolute;
       margin: 0;
@@ -172,43 +209,60 @@ article {
   }
 }
 
+//==============================================================================
+// テキスト
+//==============================================================================
 a {
   text-decoration: none;
   font-weight: bold;
-
+  color: #75AEA8;
   &:hover{
-    color:#C35B9D;
+    color:$color-text2;
   }
 }
 
 em {
-  color: #C35B9D;
+  color: $color-text2;
   font-weight: bold;
   font-size: 1.2em;
 }
 
 b{
-  color: rgb(129,194,250);
+  color: $color-text1;
   font-weight: bold;
   font-size: 1.2em;
 }
+
+//==============================================================================
+// テーブル
+//==============================================================================
 table.deco {
 	border-collapse: separate;
 	border-spacing: 1px;
 	line-height: 1.5;
-  margin-bottom: 1em;
+  margin:0 auto 0 auto;
+  box-sizing: border-box;
 
   th{
-  	padding: 10px;
+    font-size: 23px;
+    line-height: 1.6em;
+    padding: 0.2em;
   	font-weight: bold;
   	vertical-align: top;
   	color: #fff;
-  	background: rgb(129,194,250);
+  	background: rgba(129,194,250,0.7);
   }
   td{
-  	padding: 10px;
+    font-size: 23px;
+    line-height: 1.6em;
+    padding: 0.5em;
   	vertical-align: top;
   	border-bottom: 1px solid #ccc;
   	background: rgba(200, 200, 200, 0.2);
   }
+}
+
+code {
+  font-size: 23px;
+  line-height: 1.4em;  
 }
