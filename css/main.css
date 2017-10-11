@@ -1,7 +1,13 @@
-body {
-  background-image: url(/web-quest/img/bg.png);
+html {
+  font-size: 10px;
   line-height: 1.8em;
   font-family: 'Rounded Mplus 1c', serif; }
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 1vw; } }
+body {
+  background-image: url(/web-quest/img/bg.png); }
 
 article {
   background: rgba(129, 194, 250, 0.1);
@@ -9,18 +15,19 @@ article {
   article header {
     margin-bottom: 3.0em; }
     article header > h1 {
-      font-size: 40px;
+      font-size: 4.2em;
       font-weight: bold;
       color: white;
       line-height: 1.6em;
       text-indent: 0.3em;
       background-color: #A52175; }
   article > section {
-    width: 1000px;
-    height: 562px;
+    max-width: 1000px;
+    width: 100vw;
+    height: 56.2vw;
     margin: 0 auto 3em auto;
-    padding: 24px;
-    box-shadow: 0px 5px 25px 5px rgba(0, 0, 0, 0.1);
+    padding: 2.4vw;
+    box-shadow: 0px 0.5em 2.5em 0.5em rgba(0, 0, 0, 0.1);
     background-color: rgba(255, 255, 255, 0.12);
     box-sizing: border-box; }
     article > section:last-child {
@@ -30,47 +37,47 @@ article {
     article section > h2 {
       border-left: 0.3em solid #C35B9D;
       text-indent: 0.4em;
-      font-size: 40px;
+      font-size: 4.0em;
       line-height: 1.5em;
       font-weight: bold;
       margin-bottom: 0.5em; }
     article section h3 {
       position: relative;
       color: #2D579A;
-      font-size: 26px;
+      font-size: 2.6em;
       font-weight: bold;
       text-indent: 0.5em;
       line-height: 1.7em;
       background: rgba(129, 194, 250, 0.1);
       border-radius: 0.3em;
-      margin-bottom: 0.5em; }
+      margin-bottom: 0.6em; }
       article section h3:after {
         position: absolute;
         content: '';
         top: 100%;
-        left: 10px;
-        border: 15px solid transparent;
-        border-top: 15px solid rgba(129, 194, 250, 0.1);
+        left: 0.5em;
+        border: 0.3em solid transparent;
+        border-top: 0.3em solid #81c2fa;
         width: 0;
         height: 0; }
     article section > p {
-      font-size: 25px;
+      font-size: 2.5em;
       line-height: 1.6em;
       margin-bottom: 1.0em; }
       article section > p.zoom1 {
-        font-size: 35px;
+        font-size: 3.5em;
         margin-bottom: 0.4em; }
     article section ul {
       padding: 0;
-      font: 14px/1.6 'Rounded Mplus 1c', serif;
+      font: 1.4em/1.6 'Rounded Mplus 1c', serif;
       list-style: none;
       margin-bottom: 1.5em; }
       article section ul li {
         position: relative;
         padding: 0.1em 1em 0.1em 2.0em;
-        margin-bottom: 5px;
+        margin-bottom: 0.1em;
         color: #6daee6;
-        font-size: 30px;
+        font-size: 3.0em;
         font-weight: bold; }
         article section ul li:after, article section ul li:before {
           content: "";
@@ -81,16 +88,16 @@ article {
           -ms-transform: rotate(45deg);
           transform: rotate(45deg); }
         article section ul li:before {
-          top: 0.7em;
+          top: 0.5em;
           left: 0.2em;
-          width: 12px;
-          height: 12px;
-          border: 2px solid rgba(129, 194, 250, 0.5); }
+          width: 0.6em;
+          height: 0.6em;
+          border: 0.1em solid rgba(129, 194, 250, 0.5); }
         article section ul li:after {
           top: 0.9em;
           left: 0.7em;
-          width: 14px;
-          height: 14px;
+          width: 0.7em;
+          height: 0.7em;
           background: rgba(129, 194, 250, 0.3);
           -webkit-transform: rotate(60deg);
           -moz-transform: rotate(60deg);
@@ -100,34 +107,34 @@ article {
     article section ol {
       counter-reset: list;
       list-style-type: none;
-      font: 14px/1.6 'Rounded Mplus 1c', serif;
+      font: 1.4em/1.6 'Rounded Mplus 1c', serif;
       padding: 0px; }
       article section ol li {
         position: relative;
         padding: 0.1em 1em 0.1em 2.0em;
-        margin-bottom: 5px;
+        margin-bottom: 0.5em;
         color: #6daee6;
-        font-size: 30px;
+        font-size: 3.0em;
         font-weight: bold; }
         article section ol li:before {
           counter-increment: list;
           content: counter(list);
           position: absolute;
-          top: 12px;
-          left: 5px;
-          width: 30px;
-          height: 30px;
+          top: 0.2em;
+          left: 0.15em;
+          width: 1.5em;
+          height: 1.5em;
           text-align: center;
           color: #fff;
-          line-height: 30px;
+          line-height: 1.5em;
           z-index: 1; }
         article section ol li:after {
           content: "";
           position: absolute;
-          top: 12px;
-          left: 5px;
-          width: 30px;
-          height: 30px;
+          top: 0.4em;
+          left: 0.4em;
+          width: 1.1em;
+          height: 1.1em;
           background: rgba(129, 194, 250, 0.7);
           color: #fff;
           -webkit-transform: rotate(45deg);
@@ -138,16 +145,16 @@ article {
     article section dl dt {
       color: #6daee6;
       font-weight: bold;
-      font-size: 30px;
+      font-size: 3.0em;
       line-height: 1.6em; }
     article section dl dd {
-      font-size: 23px;
+      font-size: 2.3em;
       line-height: 1.6em;
       margin-bottom: 0.5em; }
     article section > .bottom {
       position: absolute;
       margin: 0;
-      bottom: 24px; }
+      bottom: 1.4vw; }
 
 a {
   text-decoration: none;
@@ -173,7 +180,7 @@ table.deco {
   margin: 0 auto 0 auto;
   box-sizing: border-box; }
   table.deco th {
-    font-size: 23px;
+    font-size: 2.3em;
     line-height: 1.6em;
     padding: 0.2em;
     font-weight: bold;
@@ -181,7 +188,7 @@ table.deco {
     color: #fff;
     background: rgba(129, 194, 250, 0.7); }
   table.deco td {
-    font-size: 23px;
+    font-size: 2.3em;
     line-height: 1.6em;
     padding: 0.5em;
     vertical-align: top;
@@ -189,5 +196,5 @@ table.deco {
     background: rgba(200, 200, 200, 0.2); }
 
 code {
-  font-size: 23px;
+  font-size: 2.3em;
   line-height: 1.4em; }
