@@ -23,6 +23,7 @@ article {
       background-color: #A52175; }
   article > section {
     max-width: 1000px;
+    max-height: 572px;
     width: 100vw;
     height: 56.2vw;
     margin: 0 auto 3em auto;
@@ -114,14 +115,14 @@ article {
         padding: 0.1em 1em 0.1em 2.0em;
         margin-bottom: 0.5em;
         color: #6daee6;
-        font-size: 3.0em;
+        font-size: 2.0em;
         font-weight: bold; }
         article section ol li:before {
           counter-increment: list;
           content: counter(list);
           position: absolute;
           top: 0.2em;
-          left: 0.16em;
+          left: 0.17em;
           width: 1.5em;
           height: 1.5em;
           text-align: center;
